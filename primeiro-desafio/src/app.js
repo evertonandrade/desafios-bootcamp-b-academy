@@ -1,5 +1,22 @@
+import Header from './Header';
+import Menu from './Menu';
+import MainSection from './MainSection';
+import MainContent from './MainContent';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+
 function App() {
-  return <h1>App</h1>;
+  return (
+    <>
+      <Header />
+      <Menu />
+      <MainSection>
+        <MainContent />
+        <Sidebar />
+      </MainSection>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
