@@ -68,3 +68,33 @@
   justify-content: center;
   height: 10vh;
 }
+
+.primary,
+.secondary {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  transition: filter ease 0.1s;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  margin: 0.2rem 0.4rem;
+}
+
+.primary:hover,
+.secondary:hover {
+  filter: brightness(90%);
+}
+
+.primary {
+  background: #007bff;
+}
+.secondary {
+  background: #6c757d;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 1rem 0;
+}
