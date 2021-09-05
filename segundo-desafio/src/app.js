@@ -76,7 +76,7 @@ function App() {
       <Menu />
       <MainSection>
         <MainContent article={{title, content}} />
-        <Sidebar articles={articles} />
+        <Sidebar articles={articles} handleArticle={{setTitle, setContent}} />
       </MainSection>
       <Footer />
     </>

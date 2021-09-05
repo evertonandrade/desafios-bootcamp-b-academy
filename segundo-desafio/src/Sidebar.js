@@ -1,7 +1,12 @@
 import Heading4 from './Heading4';
-import Button from './Button';
 
-function Sidebar({ articles }) {
+function Sidebar({ articles, handleArticle }) {
+  function changeArticle(event, article) {
+    event.preventDefault();
+    handleArticle.setTitle(article.title);
+    handleArticle.setContent(article.content);
+  }
+
   return (
     <aside className="sidebar">
       <Heading4>Artigos mais lidos</Heading4>
@@ -9,7 +14,9 @@ function Sidebar({ articles }) {
       <ul>
         {articles.map((article) => (
           <li key={article.id}>
-            <a href="/">{article.title}</a>
+            <a href="/" onClick={(event) => changeArticle(event, article)}>
+              {article.title}
+            </a>
           </li>
         ))}
       </ul>
