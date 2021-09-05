@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Header from './Header';
 import Menu from './Menu';
 import MainSection from './MainSection';
@@ -65,12 +67,15 @@ const articles = [
 ];
 
 function App() {
+  const [title, setTitle] = useState(articles[0].title);
+  const [content, setContent] = useState(articles[0].content);
+
   return (
     <>
       <Header />
       <Menu />
       <MainSection>
-        <MainContent />
+        <MainContent article={{title, content}} />
         <Sidebar articles={articles} />
       </MainSection>
       <Footer />
